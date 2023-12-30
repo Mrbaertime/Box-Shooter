@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=1]
+
+[node name="Enemy_base" instance=ExtResource( 1 )]
+scale = Vector2( 5, 5 )
+speed = 20
+hp = 5
+knockback = 100
+screen_shake = 30
+point_value = 30

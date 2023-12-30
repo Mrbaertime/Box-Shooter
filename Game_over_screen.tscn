@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Highscore.gd" type="Script" id=1]
+[ext_resource path="res://Title_screen.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Font.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Exit_2.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 3 )
+
+[node name="Game_over_screen" instance=ExtResource( 2 )]
+
+[node name="bg" parent="." index="0"]
+modulate = Color( 0.298039, 0, 0, 1 )
+
+[node name="Control" parent="." index="1"]
+rect_pivot_offset = Vector2( -471, -72 )
+
+[node name="Start_button" parent="Control" index="0"]
+modulate = Color( 0.721569, 0.298039, 0.0745098, 1 )
+margin_left = -240.0
+margin_top = 70.0
+margin_right = -40.0
+margin_bottom = 125.0
+text = "play again"
+
+[node name="Exit_button" parent="Control" index="1"]
+modulate = Color( 0.819608, 0.254902, 0.101961, 1 )
+margin_left = 50.0
+margin_top = 70.0
+margin_right = 250.0
+margin_bottom = 125.0
+script = ExtResource( 4 )
+
+[node name="Title_text" parent="Control" index="2"]
+modulate = Color( 0.721569, 0.0745098, 0.0745098, 1 )
+margin_left = -254.5
+margin_top = 45.0
+margin_right = 254.5
+margin_bottom = 179.0
+text = "Game Over"
+
+[node name="by" parent="Control" index="3"]
+modulate = Color( 0.941176, 0.0627451, 0.396078, 1 )
+
+[node name="Highscore" type="Label" parent="Control" index="4"]
+modulate = Color( 0.815686, 0.690196, 0.0862745, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -130.0
+margin_top = 186.0
+margin_right = 368.0
+margin_bottom = 255.0
+rect_scale = Vector2( 0.503707, 0.518335 )
+custom_fonts/font = SubResource( 1 )
+text = "100"
+align = 1
+valign = 1
+script = ExtResource( 1 )
